@@ -1,0 +1,65 @@
+.navigation
+{
+    position: sticky;
+    top: 0%; 
+    height: 80px;
+    background-color: white;
+
+}
+
+.menubar
+{
+            
+    height: 100vh;
+    background-color: black;
+     position: sticky;
+     top: 0%;
+    float: left;
+}
+.dashboard
+{
+    width: 80%;
+     float: left;
+    padding-left: 20px; 
+            
+}
+.notify 
+{
+    width: 26%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.vr
+{
+   display: inline-block;
+    align-self: stretch;
+            /* width: var(--cui-border-width); */
+    height: 50px;
+    padding: 0;
+    background-color: gray;
+    opacity: .25; 
+              width: 1.6px;
+    
+}
+/* .progress-thin 
+{
+            height: 4px;
+}
+.progress-group-prepend {
+ flex: 0 0 100px;
+ align-self: flex-start;
+        
+         
+text-align: left;
+}
+.progress-group-bars {
+flex-grow: 1;
+ align-self: center;
+}
+.logo img 
+{
+   border-bottom: 1px solid white;
+
+}
+         */

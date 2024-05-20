@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+
+
+.navigation
+{
+    position: sticky;
+    top: 0%; 
+    height: 80px;
+    background-color: white;
+
+}
+
+.menubar    
+{
+            
+    height: 100vh;
+    background-color: black;
+     position: sticky;
+     top: 0%;
+    float: left;
+    overflow-y: scroll;
+}
+.dashboard
+{
+    width: 80%;
+     float: left;
+    padding-left: 20px; 
+            
+}
+.notify 
+{
+    width: 26%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.justify-content-between {
+    justify-content: space-between !important;
+    }
+    .d-flex {
+    display: flex !important;
+    }
+    .icon {
+    display: inline-block;
+    color: inherit;
+    text-align: center;
+    vertical-align: -.125rem;
+    fill: currentcolor;
+}   
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+    
+}
+button:not(:disabled), [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled) {
+    cursor: pointer;
+}
+.icon:not(.icon-c-s):not(.icon-custom-size) {
+    /* width: 1rem;
+    height: 1rem;
+    /* font-size: 1rem; */
+    text-align: center;
+     */
+}
+.h-100 {
+    height: 100% !important;
+}
+.w-100 {
+    width: 100% !important;
+}  
+.row-cols-lg-4>* {
+        flex: 0 0 auto;
+        width: 25%;
+} 
+ .text-center {
+    text-align: center !important;
+}
+.mb-2 {
+    margin-bottom: .5rem !important;
+} 
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.progress-title span
+{
+    margin-left: 93%;
+    text-align: end;
+    color: #3b69b0;
+    font-weight: bolder;
+}
+.progress-group {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 1rem;
+}
+
+.progress-group-header {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    margin-bottom: .25rem;
+  
+
+}
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    height: 3px;
+} 
+
+.bg-info-gradient {
+      background-color: #3b5998;
+}   
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+.progress-group {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 1rem;
+}
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+.px-3 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+}
+.mb-3 {
+    margin-bottom: 1rem !important
+} 
+.border-start-4 {
+    border-left-width: 4px !important;
+    
+}
+.progress-group {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 1rem;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.col-6 {
+    flex: 0 0 auto;
+    width: 50%;
+}
+.border-start {
+    border-left: 10px;
+} 
+.progress-group-bars .progress:not(:last-child) {
+    margin-bottom: 2px;
+   
+}
+.progress-thin {
+    height: 4px;
+   
+  
+
+}
+.border-start-info {
+    border-left-color:  #39f!important;
+}
+.border-start-danger {
+    border-left-color: #e55353 !important;
+}
+.border-start-warning {
+    border-left-color: #f9b115 !important;
+}
+.border-start-success {
+    border-left-color:  #1b9e3e !important;
+}  
+
+*, *::before, *::after {
+    box-sizing: border-box;
+   
+} 
+
+div {   
+    display: block;
+    unicode-bidi: isolate;
+}
+/* .card-body {
+    flex: 1 1 auto;
+    padding: var(--cui-card-spacer-y) var(--cui-card-spacer-x);
+    color: var(--cui-card-color);
+} */
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: var(--cui-border-width) solid;
+    opacity: .25;
+}
+hr {
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    unicode-bidi: isolate;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+.progress-group {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 1rem;
+}
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+   
+    text-align: center;
+    white-space: nowrap;
+    background-color: var(--cui-progress-bar-bg);
+    transition: var(--cui-progress-bar-transition); 
+}
+.progress-group-bars {
+    flex-grow: 1;
+    align-self: center;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.progress-group-prepend {
+    flex: 0 0 100px;
+    align-self: center;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}   
+.vr
+{
+   display: inline-block;
+    height: 50px;
+    padding: 0; 
+    background-color: gray;
+    opacity: .25; 
+    width: 1.6px;
+}
+.col-lg-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+    .col-sm-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    *, *::before, *::after {
+    box-sizing: border-box;
+}
+.text-center {
+    text-align: center !important;
+}
+.card-body {
+    flex: 1 1 auto;
+    
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.col {
+    flex: 1 0 0%;
+}
+.progress-bar 
+{
+    background-color: #3399ff;
+}
+.progress-bars 
+{
+    background-color: #1b9e3e;
+}
+.icon:not(.icon-c-s):not(.icon-custom-size).icon-lg {
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 1.25rem;
+}
+.icon:not(.icon-c-s):not(.icon-custom-size) {
+    width: 1rem;
+    height: 1rem;
+    font-size: 1rem;
+}
+.me-2 {
+    margin-right: .5rem !important;
+}
+.logo 
+{
+    border-bottom: 1.5px solid gray;
+    width: 100%;
+}
+.accordion-item 
+{
+    border: none;
+    outline: none;
+    background:transparent;
+} 
+.accordion button 
+{
+    border: none;
+    outline: none;
+    background-color:black;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+    <div class="d-flex align-items-start">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
+        </div>
+    </div>  
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 menubar col-lg-2">
+                <div class="logo text-light">
+                    <img src="img/logo-removebg-preview.png"  alt="" style="height: 100px; width: 130px; margin: auto; align-items: center;">
+                </div>
+               <div class="simplebar-content">
+                <li class="nav-item list-unstyled text-light p-2">
+                    <a class="nav-link text-light" href="">
+                        <i class="bi bi-speedometer2 p-2 text-secondary" style="font-size: 20px;"></i>
+                        <span data-coreui-i18n="">Dashboard</span>
+
+                    </a>
+                </li>
+                <li class="nav-title text-secondary fw-bolder fs-6  list-unstyled p-3" data-coreui-i18n="theme">THEME </li>
+                <li class="nav-item list-unstyled">
+                    <a class="nav-link text-light list-unstyled" href="">
+                        <i class="bi bi-droplet p-2 text-secondary" style="font-size: 20px;"></i>
+                        <span data-coreui-i18n="">Colors</span>
+
+                    </a>
+                </li>
+                <li class="nav-item list-unstyled">
+                    <a class="nav-link text-light list-unstyled" href="">
+                        <i class="bi bi-pencil p-2 text-secondary" style="font-size: 20px;"></i>
+                        <span data-coreui-i18n="">Typography</span>
+
+                    </a>
+                </li>
+                <li class="nav-title text-secondary fw-bolder fs-6  list-unstyled p-3" data-coreui-i18n="theme">COMPONENTS</li>
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item mb-3 bg-dark text-dark">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button  bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne " aria-expanded="true" aria-controls="collapseOne">
+                            <i class="bi bi-puzzle p-2 text-secondary" style="font-size: 20px;"></i>
+                            base
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-light">
+                            <li>Accordion</li>
+                            <li>Breadcrumb</li>
+                            <li>Cards</li>
+                            <li>Carousel</li>
+                            <li>Collapse</li>
+                            <li>List Group</li>
+                            <li>Navs & Tabs</li>
+                            <li>Pagination</li>
+                            <li>Placeholder</li>
+                            <li>Popovers</li>
+                            <li>Progress</li>
+                            <li>Spinners</li>
+                            <li>Tables</li>
+                            <li>Tooltips</li>
+
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="accordion-item  mb-3 bg-dark text-light">
+                        <h2 class="accordion-header" id="headingtwo">
+                          <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetwo" aria-expanded="true" aria-controls="collapsetwo">
+                            <i class="bi bi-cursor p-2 text-secondary" style="font-size: 20px;"></i>
+                            buttons
+                          </button>
+                        </h2>
+                        <div id="collapsetwo" class="accordion-collapse collapse show" aria-labelledby="headingtwo" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                              <li>Buttons</li>
+                              <li>Buttons group</li>
+                              <li>Loading buttons</li>
+                              <li>Dropdowns</li>
+                             
+                            
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item  mb-3 bg-dark text-light">
+                        <h2 class="accordion-header" id="headingthree">
+                          <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
+                            <i class="bi bi-card-heading p-2 text-secondary" style="font-size: 20px;"></i>
+                            Forms
+                          </button>
+                        </h2>
+                        <div id="collapsethree" class="accordion-collapse collapse show" aria-labelledby="headingthree" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                              <li>Form control</li>
+                              <li>Select</li>
+                              <li>Multi Select</li>
+                              <li>Checks & radio</li>
+                              <li>Range</li>
+                              <li>Input group</li>
+                              <li>Floating labels</li>
+                             
+                             
+  
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="accordion-item  mb-3 bg-dark text-light">
+                        <h2 class="accordion-header" id="headingfore">
+                          <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefore" aria-expanded="true" aria-controls="collapsefore">
+                            <i class="bi bi-star p-2 text-secondary" style="font-size: 20px;"></i>
+                          Icons
+                          </button>
+                        </h2>
+                        <div id="collapsefore" class="accordion-collapse collapse show" aria-labelledby="headingfore" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <li>Coreul Icons</li>
+                            <li>Coreul icons-brand</li>
+                            <li>Coreul icons-flag</li>
+                            <li></li>
+                             
+                             
+
+                             
+
+                             
+                             
+  
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item  mb-3 bg-dark text-light">
+                        <h2 class="accordion-header" id="headingfive">
+                          <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
+                            <i class="bi bi-bell p-2 text-secondary" style="font-size: 20px;"></i>
+                          notification
+                          </button>
+                        </h2>
+                        <div id="collapsefive" class="accordion-collapse collapse show" aria-labelledby="headingfive" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <li>Alerts</li>
+                            <li>badge</li>
+                            <li>Modals</li>
+                            <li>Toasts</li>
+                            
+                            
+                    
+                          </div>
+                        </div>
+                      </div>
+      
+
+
+
+
+
+                </div>
+
+
+                <li class="nav-item list-unstyled">
+                    <a class="nav-link active text-light" href="">
+                        <i class="bi bi-calculator p-2 text-secondary" style="font-size: 20px;"></i>
+                        <span data-coreui-i18n="" >widgets</span>
+                        <span class="badge bg-info text-uppercase ms-auto" data-coreui-i18n="new">new</span>
+                    </a>
+
+                </li>
+                <li class="nav-divider list-unstyled"></li>
+                <li class="nav-title text-secondary fs-6 fw-bolder list-unstyled p-3" data-coreui-i18n="plugins">PLUGINS</li>
+
+                <li class="nav-item  text-light list-unstyled">
+                    <a class="nav-link  text-light" href="">
+                        <i class="bi bi-calendar2-week p-2 text-secondary" style="font-size: 20px;"></i>
+                        <span data-coreui-i18n="">calender</span>
+                        <span class="badge bg-danger ms-auto">PRO</span>
+
+                    </a>
+                </li>
+
+                <li class="nav-item  text-light list-unstyled">
+                    <a class="nav-link  text-light" href="">
+                        <i class="bi bi-pie-chart p-2 text-secondary" style="font-size: 20px;"></i>
+                        <span data-coreui-i18n="">Charts</span>
+
+                    </a>
+                </li>
+                <li class="nav-item  text-light list-unstyled">
+                    <a class="nav-link  text-light" href="">
+                        <i class="bi bi-table p-2 text-secondary" style="font-size: 20px;"></i>
+                        <span data-coreui-i18n="">Data tables</span>
+                        <span class="badge bg-danger ms-auto">PRO</span>
+
+                    </a>
+                </li>
+                <li class="nav-item text-light list-unstyled">
+                    <a class="nav-link  text-light" href="">
+                        <i class="bi bi-map p-2 text-secondary" style="font-size: 20px;"></i>
+                        <span data-coreui-i18n="">Google maps</span>
+                        <span class="badge bg-danger ms-auto">PRO</span>
+
+                    </a>
+                </li>
+                <li class="nav-title text-secondary fs-6 fw-bolder list-unstyled p-3" data-coreui-i18n="">EXTRAS</li>
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item  mb-3 bg-dark text-light">
+                      <h2 class="accordion-header" id="headingseven">
+                        <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseseven" aria-expanded="true" aria-controls="collapsefive">
+                            <i class="bi bi-bell p-2 text-secondary" style="font-size: 20px;"></i>
+                          pages
+                          </button>
+                      </h2>
+                      <div id="collapseseven" class="accordion-collapse collapse show" aria-labelledby="headingseven" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <li><i class="bi bi-box-arrow-left"></i><span data-coreui-i18n="">Login</span></li>
+                            <li><i class="bi bi-box-arrow-left"></i><span data-coreui-i18n="">Register</span></li>
+                            <li><i class="bi bi-bug"></i><span data-coreui-i18n="">Error 404</span></li>
+                            <li><i class="bi bi-bug"></i><span data-coreui-i18n="">Error 500</span></li>
+
+
+
+                       
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+               </div>
+               </div>
+               
+
+            </div>
+            <div class="col-10 dashboard  col-lg-10">
+                <div class="navigation d-flex justify-content-between  align-items-center" >
+                    <div class="user d-flex justify-content-between  align-items-center " style="width: 20%; ">
+                       
+                     <i class="bi bi-list button"  style="font-size: 30px;"></i>
+                            
+                     <li class="list-unstyled ">Dashboard</li>
+                     <li class="list-unstyled ">User</li>
+                     <li class="list-unstyled ">Settings</li>
+        
+                    </div>
+                    <div class="notify d-flex justify-content-between  align-items-center" style="width: 20%;">
+        
+                        <i class="bi bi-bell"  style="font-size:22px; position:relative; padding-left: 4px;"> <span class="badge bg-secondary bg-danger " style="position:absolute; top:-8px; left:8px; border-radius: 50%; font-size: 12px; ">1</span></i>
+                        <i class="bi bi-list-task"  style="font-size: 22px; position:relative; padding-left: 4px;"><span class="badge bg-secondary bg-warning  " style="position:absolute; top:-8px; left:8px; border-radius: 50%; font-size: 12px; ">1</span></i>
+                        <i class="bi bi-envelope-open"  style="font-size: 22px; position:relative; padding-left: 4px;"><span class="badge bg-secondary bg-info  " style="position:absolute; top:-8px; left:8px; border-radius: 50%; font-size: 12px; ">1</span></i> |
+                        <i class="bi bi-translate" style="font-size: 22px; padding-left: 4px;"></i>
+                        <i class="bi bi-brightness-high" style="font-size: 22px; padding-left: 4px;"></i> |
+                        <i class="bi bi-person-circle" style="font-size: 22px; padding-left: 4px;"></i>
+                        <i class="bi bi-building-gear" style="font-size: 22px; padding-left: 4px;"></i>
+        
+                    </div>
+                   </div>
+
+
+                   <div class="container">
+                    <div class="row me-2">
+                        <div class="col-3">
+                            <div class="card text-light" style="height: 170px;  background-color: #6610f2;">
+                                <div class="fs-3 ps-3 pt-4 fw-bold     bot">
+                                    26K
+                                        <span class="fs-6 fw-normal">(-12.4%s
+                                            <i class="bi bi-arrow-down"></i>)
+                                           
+                                    
+                                    </span>
+                                  <div class="users fw-normal pb-5 fs-6">users</div>
+            
+                                    </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-3">
+                            <div class="card text-light" style="height: 170px; background-color: rgb(12, 165, 226);">
+                                <div class="fs-3 ps-3 pt-4 fw-bold     bot">
+                                    $6.200
+                                        <span class="fs-6 fw-normal">(-40.9%
+                                            <i class="bi bi-arrow-down"></i>)
+                                           
+                                    </span>
+                                    <div class="users fw-normal pb-5 fs-6">income</div>
+                                    
+                                    </div>
+                              
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card bg-warning text-light" style="height: 170px; ">
+                                <div class="fs-3 ps-3 pt-4 fw-bold     bot">
+                                    2.49%
+                                        <span class="fs-6 fw-normal">(-84.7%
+                                            <i class="bi bi-arrow-down"></i>)
+                                           
+                                    
+                                    </span>
+                                    <div class="users fw-normal pb-5 fs-6">Conversion Rate</div>
+                                    
+                                    </div>
+        
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card bg-danger text-light" style="height: 170px;">
+                                <div class="fs-3 ps-3 pt-4 fw-bold     bot">
+                                     44k
+                                        <span class="fs-6 fw-normal">(-23.6%
+                                            <i class="bi bi-arrow-down"></i>)
+                                           
+                                    
+                                    </span>
+                                    <div class="users fw-normal pb-5 fs-6">Sessions</div>
+                                    
+                                    </div>
+        
+                            </div>
+                        </div>
+                     
+                       
+                            
+                 
+                </div>
+                   </div>
+
+                   <div class="card mt-3">
+                  <div class="container">
+                    <div class="row">
+                        <div class="card-body">
+                            <div class="card-footer" style="background-color: white; border:none;">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <h4 class="card-title mb-0" data-coreui-i18n="traffic">Traffic</h4>
+                                <div class="small text-body-secondary">
+                                    <span data-coreui-i18n-date="dateonlymonthname,{ date:'2023,1,1'}">january</span>
+                                  -
+
+                                    <span data-coreui-i18n-date="dateonlymonthname,{ date:'2023,6,30'}">june</span>
+                                     2023 
+
+
+                                </div>
+
+                            </div>
+                            <div class="btn-toolbar d-none d-md-block" role="toolbar" aria-label="toolbar with buttons">
+                                <div class="btn-group btn-group-toggle mx-3" data-coreui-toggle="buttons">
+                                    <input class="btn-check" id="option1" type="radio" name="options" autocomplete="off">
+                                    <label class="btn btn-outline-secondary" data-coreui-i18n="day">day</label>
+
+                                    <input class="btn-check" id="option2" type="radio" name="options" autocomplete="off" checked>
+                                    <label class="btn btn-outline-secondary active" data-coreui-i18n="month">mont</label>
+
+                                    <input class="btn-check" id="option3" type="radio" name="options" autocomplete="off">
+                                    <label class="btn btn-outline-secondary" data-coreui-i18n="year">year</label>
+
+
+
+                                </div>
+                                <button class="btn btn-primary" type="button" fdprocessedid="jp09sb">
+                                  
+                                    <i class="bi bi-cloud-download"></i>
+                                
+                                </button>
+
+                            </div>
+
+                        </div> 
+                    </div>
+
+                    </div>
+                    <div class="c-chart-wrapper" style="height: 300px; margin-bottom: 50px;">
+   
+                        <div class="col-12">
+                            <div>
+                                <canvas id="myChart" aria-label="chart" role="img" width="700" height="200"></canvas>
+                            </div>
+                        </div>
+                    
+                  </div> 
+                
+                  
+                   <script>
+                    const ctx = document.getElementById('myChart');
+                  
+                    new Chart(ctx, {
+                      type: 'line',
+                      data: {
+                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                        datasets: [{
+                          label: '# of Votes',
+                          data: [12, 19, 3, 5, 2, 3],
+                          borderWidth: 1
+                        }]
+                      },
+                      options: {
+                        scales: {
+                          y: {
+                            beginAtZero: true
+                          }
+                        }
+                      }
+                    });
+                  </script>
+               
+                  </div>
+
+                  </div>
+             <div class="card-footer" style="width: 100%; margin: auto;">
+                  <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4  row-cols-xl-5 g-4 mb-2 text-center">
+                    <div class="col">
+                        <div class="text-body-secondary" data-coreui-i18n="visits">visits</div>
+                        <div class="text-truncate" style="font-weight: 600">
+                            <span data-coreui-i18n="usercounter,{'counter':'29.703'}">29.703 Users</span>
+                            (40%)
+                        </div>
+                        <div class="progress progress-thin mt-2">
+                            <div class="progress-bar bg-success" role="progress-bar" style="width: 40%;" aria-valuemin="0" aria-valuemax="100">
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="text-body-secondary" data-coreui-i18n="visits">Unique</div>
+                        <div class="text-truncate" style="font-weight: 600">
+                            <span data-coreui-i18n="usercounter,{'counter':'29.703'}">24.093 Users</span>
+                            (20%)
+                        </div>
+                        <div class="progress progress-thin mt-2">
+                            <div class="progress-bar bg-info" role="progress-bar" style="width: 20%;" aria-valuemin="0" aria-valuemax="100">
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="text-body-secondary" data-coreui-i18n="visits">Pageviews</div>
+                        <div class="text-truncate" style="font-weight: 600">
+                            <span data-coreui-i18n="usercounter,{'counter':'29.703'}">78.706 Views</span>
+                            (60%)
+                        </div>
+                        <div class="progress progress-thin mt-2">
+                            <div class="progress-bar bg-warning" role="progress-bar" style="width: 60%;" aria-valuemin="0" aria-valuemax="100">
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="text-body-secondary" data-coreui-i18n="visits">New Users</div>
+                        <div class="text-truncate" style="font-weight: 600">
+                            <span data-coreui-i18n="usercounter,{'counter':'29.703'}">22.123 Users</span>
+                            (80%)
+                        </div>
+                        <div class="progress progress-thin mt-2">
+                            <div class="progress-bar bg-danger" role="progress-bar" style="width: 80%;" aria-valuemin="0" aria-valuemax="100">
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                  </div> 
+                </div>
+            </div>
+            <div class="container mt-5">
+                <div class="row">
+                  <div class="col-4">
+                      <div class="card">
+                          <div class="card-header position-relative d-flex justify-content-center align-items-center" style="height: 120px; background-color: #3b5998;">
+                              <i class="bi bi-facebook fs-1 text-light"></i>
+                              <div class="chart-wrapper position-absolute top-0 start-0 w-100">
+                              <canvas id="social-box-chart-2"height="90"></canvas>
+                          </div>
+      
+                        
+                      </div>
+                          <div class="card-body row text-center">
+                              <div class="col">
+                                  <div class="" style="font-weight: 600; font-size: 1.25rem;">89k</div>
+                                  <div class="text-uppercase  text-body-secondary small" style="font-size: .875em; color:grey;" data-coreui-i18n="friends">FRIENDS</div>
+                              </div>
+                              <div class="vr"></div>
+                              <div class="col">
+                                  <div class="fs-5 fw-semibold" style="font-weight: 600; font-size: 1.25rem;">459</div>
+                                  <div class="text-uppercase  text-body-secondary small" style="font-size: .875em; color:grey" data-coreui-i18n="friends">FEEDS</div>
+                              </div>
+      
+                          </div>
+      
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="card">
+                          <div class="card-header position-relative d-flex justify-content-center align-items-center" style="height: 120px; background-color: #00aced">
+                              <i class="bi bi-twitter fs-1 text-light"></i>
+                              <div class="chart-wrapper position-absolute top-0 start-0 w-100 h-100">
+                              <canvas id="social-box-chart-2" height="90"></canvas>
+                          </div>
+      
+                        
+                      </div>
+                          <div class="card-body row text-center">
+                              <div class="col">
+                                  <div class="fs-5 fw-semibold" style="font-weight: 600; font-size: 1.25rem;">973k</div>
+                                  <div class="text-uppercase  text-body-secondary small" style="font-size: .875em; color:grey" data-coreui-i18n="friends">FOLLOWERS</div>
+                              </div>
+                              <div class="vr"></div>
+                              <div class="col">
+                                  <div class="fs-5 fw-semibold" style="font-weight: 600; font-size: 1.25rem;">1.792</div>
+                                  <div class="text-uppercase  text-body-secondary small" style="font-size: .875em; color:grey" data-coreui-i18n="friends">TWEETS</div>
+                              </div>
+      
+                          </div>
+                        
+                      </div>  
+                      
+                  </div>
+                  <div class="col-4">
+                      <div class="card">
+                          <div class="card-header position-relative d-flex justify-content-center align-items-center" style="height: 120px; background-color: #4875b4;">
+                              <i class="bi bi-linkedin fs-1 text-light"></i>
+                              <div class="chart-wrapper position-absolute top-0 start-0 w-100 h-100">
+                              <canvas id="social-box-chart-2" height="90"></canvas>
+                          </div>
+      
+                        
+                      </div>
+                          <div class="card-body row text-center">
+                              <div class="col">
+                                  <div class="fs-5 fw-semibold" style="font-weight: 600; font-size: 1.25rem;">500+</div>
+                                  <div class="text-uppercase  text-body-secondary small" style="font-size: .875em; color:grey" data-coreui-i18n="friends">CONTACTS</div>
+                              </div>
+                              <div class="vr"></div>
+                              <div class="col">
+                                  <div class="fs-5 fw-semibold" style="font-weight: 600; font-size: 1.25rem;">292</div>
+                                  <div class="text-uppercase  text-body-secondary small" style="font-size: .875em; color:grey" data-coreui-i18n="friends">FEEDS</div>
+                              </div>
+      
+                          </div>
+                          
+                      </div>
+                  </div>
+                </div>
+              
+                
+               
+            
+             
+      
+      
+      
+              </div>
+           <div class="card mt-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card-mb-4">
+                            <div class="card-header" data-coreui-i18n="trafficandsales">traffic and sales</div>
+                            <div class="card-body ms-3 mt-2">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="border-start border-start-4 border-start-info px-3 mb-3">
+                                                    <div class="small text-body-secondary  text-truncate" data-coreui-i18n="nexw clienyts">New Clients</div>
+                                                    <div class="fs-4 fw-bold">9.123</div>
+                                                </div>
+                                            </div>
+            
+                                            <div class="col-6">
+                                                <div class="border-start border-start-4 border-start-danger px-3 mb-3">
+                                                    <div class="small text-body-secondary  text-truncate" data-coreui-i18n="nexw clienyts">Recurring Clients</div>
+                                                    <div class="fs-4 fw-bold">22.643</div>
+                                                </div>
+                                            </div>
+            
+            
+                                        </div>
+            
+                                        <hr class="mt-0">
+            
+                                        <div class="progress-group mb-4">
+                                            <div class="progress-group-prepend">
+                                                <span class="small" data-coreui-i18n="monday">Monday</span>
+                                            </div>
+                                            <div class="progress-group-bars">
+                                               <div class="progress progress-thin mb-1">
+                                                <div class="progress-bar" role="progress-bar" style="width: 34%;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100">
+                                
+                                                </div>
+                                
+                                               </div>
+                                               <div class="progress progress-thin">
+                                                <div class="progress-bar bg-danger" role="progress-bar" style="width: 78%;"  aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                                
+                                                </div>
+                                
+                                               </div>
+                                
+                                
+                                            </div>
+                                
+                                        </div>
+                                        <div class="progress-group mb-4">
+                                            <div class="progress-group-prepend">
+                                                <span class="small" data-coreui-i18n="">Tuesday</span>
+                                            </div>
+                                            <div class="progress-group-bars">
+                                               <div class="progress progress-thin mb-1">
+                                                <div class="progress-bar" role="progress-bar" style="width: 56%;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100">
+                                
+                                                </div>
+                                
+                                               </div>
+                                               <div class="progress progress-thin">
+                                                <div class="progress-bar bg-danger" role="progress-bar" style="width: 94%;"  aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                                
+                                                </div>
+                                
+                                               </div>
+                                
+                                
+                                            </div>
+                                
+                                        </div>
+                                        <div class="progress-group mb-4">
+                                            <div class="progress-group-prepend">
+                                                <span class="small" data-coreui-i18n="">Wednesday</span>
+                                            </div>
+                                            <div class="progress-group-bars">
+                                               <div class="progress progress-thin mb-1">
+                                                <div class="progress-bar" role="progress-bar" style="width: 12%;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100">
+                                
+                                                </div>
+                                
+                                               </div>
+                                               <div class="progress progress-thin">
+                                                <div class="progress-bar bg-danger" role="progress-bar" style="width: 67%;"  aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                                
+                                                </div>
+                                
+                                               </div>
+                                
+                                
+                                            </div>
+                                
+                                        </div>
+                                        <div class="progress-group mb-4">
+                                            <div class="progress-group-prepend">
+                                                <span class="small" data-coreui-i18n="">Thursday</span>
+                                            </div>
+                                            <div class="progress-group-bars">
+                                               <div class="progress progress-thin mb-1">
+                                                <div class="progress-bar" role="progress-bar" style="width: 43%;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100">
+                                
+                                                </div>
+                                
+                                               </div>
+                                               <div class="progress progress-thin">
+                                                <div class="progress-bar bg-danger" role="progress-bar" style="width: 91%;"  aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                                
+                                                </div>
+                                
+                                               </div>
+                                
+                                
+                                            </div>
+                                
+                                        </div>
+                                        <div class="progress-group mb-4">
+                                            <div class="progress-group-prepend">
+                                                <span class="small" data-coreui-i18n="">Friday</span>
+                                            </div>
+                                            <div class="progress-group-bars">
+                                               <div class="progress progress-thin mb-1">
+                                                <div class="progress-bar" role="progress-bar" style="width: 22%;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100">
+                                
+                                                </div>
+                                
+                                               </div>
+                                               <div class="progress progress-thin">
+                                                <div class="progress-bar bg-danger" role="progress-bar" style="width: 73%;"  aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                                
+                                                </div>
+                                
+                                               </div>
+                                
+                                
+                                            </div>
+                                
+                                        </div>
+                                        <div class="progress-group mb-4">
+                                            <div class="progress-group-prepend">
+                                                <span class="small" data-coreui-i18n="">Saturday</span>
+                                            </div>
+                                            <div class="progress-group-bars">
+                                               <div class="progress progress-thin mb-1">
+                                                <div class="progress-bar" role="progress-bar" style="width: 53%;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100">
+                                
+                                                </div>
+                                
+                                               </div>
+                                               <div class="progress progress-thin">
+                                                <div class="progress-bar bg-danger" role="progress-bar" style="width: 82%;"  aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                                
+                                                </div>
+                                
+                                               </div>
+                                
+                                
+                                            </div>
+                                
+                                        </div>
+                                        <div class="progress-group mb-4">
+                                            <div class="progress-group-prepend">
+                                                <span class="small" data-coreui-i18n="">Sunday</span>
+                                            </div>
+                                            <div class="progress-group-bars">
+                                               <div class="progress progress-thin mb-1">
+                                                <div class="progress-bar" role="progress-bar" style="width: 9%;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100">
+                                
+                                                </div>
+                                
+                                               </div>
+                                               <div class="progress progress-thin">
+                                                <div class="progress-bar bg-danger" role="progress-bar" style="width: 69%;"  aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                                
+                                                </div>
+                                
+                                               </div>
+                                
+                                
+                                            </div>
+                                
+                                        </div>
+            
+            
+                                    </div>
+            
+            
+            
+            
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="border-start border-start-4 border-start-warning px-3 mb-3">
+                                                    <div class="small text-body-secondary text-truncate" data-coreui-i18n="nexw clienyts">Pageviews</div>
+                                                    <div class="fs-4 fw-bold">9.123</div>
+                                                </div>
+            
+                                            </div>
+            
+                                            <div class="col-6">
+                                                <div class="border-start border-start-4 border-start-success px-3 mb-3">
+                                                    <div class="small text-body-secondary text-truncate" data-coreui-i18n="nexw clienyts">Organic</div>
+                                                    <div class="fs-4 fw-bold">9.123</div>
+                                                </div>
+            
+                                            </div>
+                                        </div>
+                                        <hr class="mt-0 me-2">
+            
+            
+            
+                                        <div class="progress-group2  mb-3 me-2">
+                                            <div class="progress-group-header">
+                                               
+                                                <i class="bi bi-person"></i>
+                                       
+                                                <div data-coreui-i18n="male">male</div>
+                                                <div class="ms-auto fw-bold">43%</div>
+                    
+                                            </div>
+                                            <div class="progress-group-bars-nav" style="height: 5px;">
+                                                
+                                                    <div class="progress progress-thin-nav" style="height: 5px;">
+                                                        <div class="progress-bar bg-warning-gradient" role="progress-bar" style="width: 43%; height: 5px; background-color: #f9b115" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
+                                        
+                                                       </div>
+                    
+                                            
+                                            </div>
+                    
+                    
+                                        </div>
+                                        <div class="progress-group2 mb-5  me-2">
+                                            <div class="progress-group-header">
+                                                <i class="bi bi-person-fill"></i>
+                                                <div data-coreui-i18n="Female">Female</div>
+                                                <div class="ms-auto fw-bold">37%</div>
+                    
+                                            </div>
+                                            <div class="progress-group-bars-nav" style="height: 5px;">
+                                                
+                                                    <div class="progress progress-thin-nav" style="height: 5px;">
+                                                        <div class="progress-bar bg-warning-gradient" role="progress-bar" style="width: 37%; height: 5px; background-color: #f9b115" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
+                                        
+                                                       </div>
+                    
+                                            
+                                            </div>
+                    
+                    
+                                        </div>
+                                        <div class="progress-group2 mb-2  me-2">
+                                            <div class="progress-group-header">
+                                               <i class="bi bi-google"></i>
+                                                <div data-coreui-i18n="Organic Search">Organic Search</div>
+                                                <div class="ms-auto  fw-bold">191.235
+                                                    (56%)</div>
+                    
+                                            </div>
+                                            <div class="progress-group-bars-nav" style="height: 5px;">
+                                                
+                                                    <div class="progress progress-thin-nav" style="height: 5px;">
+                                                        <div class="progress-bars" role="progress-bar" style="width: 56%; height: 5px;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
+                                        
+                                                       </div>
+                    
+                                            
+                                            </div>
+                    
+                    
+                                        </div>
+                                        <div class="progress-group2  mb-3  me-2">
+                                            <div class="progress-group-header">
+                                                <i class="bi bi-facebook"></i>
+                                                <div data-coreui-i18n="male">Facebook</div>
+                                                <div class="ms-auto fw-bold">51.223
+                                                    (15%)</div>
+                    
+                                            </div>
+                                            <div class="progress-group-bars-nav" style="height: 5px;">
+                                                
+                                                    <div class="progress progress-thin-nav" style="height: 5px;">
+                                                        <div class="progress-bars" role="progress-bar" style="width: 15%; height: 5px;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
+                                        
+                                                       </div>
+                    
+                                            
+                                            </div>
+                    
+                    
+                                        </div>
+                                        <div class="progress-group2  mb-3  me-2">
+                                            <div class="progress-group-header">
+                                                <i class="bi bi-twitter"></i>
+                                                <div data-coreui-i18n="male">Twitter</div>
+                                                <div class="ms-auto fw-bold">37.564
+                                                    (11%)</div>
+                    
+                                            </div>
+                                            <div class="progress-group-bars-nav" style="height: 5px;">
+                                                
+                                                    <div class="progress progress-thin-nav" style="height: 5px;">
+                                                        <div class="progress-bars" role="progress-bar" style="width: 11%; height: 5px;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
+                                        
+                                                       </div>
+                    
+                                            
+                                            </div>
+                    
+                    
+                                        </div>
+                                        <div class="progress-group2  mb-3  me-2">
+                                            <div class="progress-group-header">
+                                                <i class="bi bi-linkedin"></i>
+                                                <div data-coreui-i18n="">Linkedin</div>
+                                                <div class="ms-auto fw-bold">27.319
+                                                    (8%)</div>
+                    
+                                            </div>
+                                            <div class="progress-group-bars-nav" style="height: 5px;">
+                                                
+                                                    <div class="progress progress-thin-nav" style="height: 5px;">
+                                                        <div class="progress-bars
+                                                        " role="progress-bar" style="width: 8%; height: 5px;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
+                                        
+                                                       </div>
+                    
+                                            
+                                            </div>
+                    
+                    
+                                        </div>
+            
+            
+            
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+
+
+
+
+            <div class="container">
+                <div class="row" height="10px">
+                    <div class="col-6 m-auto w-100 pt-5">
+                       
+                        <table class="table border table-striped table-light table-hover borderless-remover border">  
+                            <tr>
+                                <td class=" fw-bolder">USER</td>
+                                 <td class="col-4 text-center pe-5 fw-bolder">COUNTRY</td>
+                                <td class="fw-bolder">USAGE</td>
+                                <td class="fw-bolder">Payment Method</td>
+                                <td class="fw-bolder">Activity</td>
+                            </tr>
+                            <tr class="w-10">
+                                <td>
+                                    <div class="col-12 border-radius=70%">
+                                        <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww" alt="" class="rounded-circle" class="w-50px" height="50px">
+                                        <div class=" position-absolute d-inline">
+        
+                                        <h2 class="text-center fs-5 text fw-bolder">Yiorgos Avraamu</h2>
+                                        <p class="text-center fs-6 text text-secondary">New | Registered: Jan 10, 2023</p>
+                                        </div>
+        
+                                    </div> 
+                                </td>
+                                <div class="ps-5">
+                                <td class="ps-5">
+                                    <h1 class="fs-5 text ps-1 fw-light text-center ps-4">software engineer</h1>
+                                    <p class="fs-6 text ps-1 text-secondary  text-center pe-4">IT department</p>
+                                </td>
+                            </div>
+                                <td class="pt-4">
+                                    <span class="badge bg-success w-50 fs-6 text text-dark" >Active</span></h1>
+                                </td>
+                               
+                                <td class="pt-4">
+                                    <p class="text-secondary">Senior</p>
+                                </td> 
+                                <td class="pt-4">
+                                    <p class="text-primary">EDIT</p>
+        
+                                </td>
+                            </tr>
+                            <tr class="w-20">
+                                <td>
+                                    <div class="col-12 border-radius=50%">
+                                        <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww" alt="" class="rounded-circle" class="w-50px" height="50px">
+                                        <div class="position-absolute d-inline">
+        
+                                            <h2 class="text-center fs-5 text  fw-bolder">Avram Tarasios</h2>
+                                            <p class="text-center fs-6 text pb-0 text-secondary">   </p>
+                                            </div>
+                                    </div>
+                                </td>
+                                <td class="ps-2 w-10">
+                                    <h1 class="fs-5 text  fw-light text-center">consultant</h1>
+                                    <p class="fs-7 text  text-secondary text-center pe-4">finance</p>
+                                </td>
+                                <td class="pt-4">
+                                     <span class="badge bg-info w-50 fs-6 text text-primary">onboarding</span></h1>
+        
+                                </td>
+                                <td class="pt-4"> 
+                                    <p class="text-secondary">Junior</p>
+                                </td>
+                                <td class="pt-4">
+                                    <P class="text-primary">EDIT</P>
+        
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="col-12 border-radius=50%">
+                                        <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww" alt="" class="rounded-circle" class="w-50px" height="50px">
+                                        <div class="position-absolute d-inline">
+        
+                                            <h2 class="text-center fs-5 text pe-5 fw-bold">Kate Hunington</h2>
+                                            <p class="text-center fs-6 text pb-0 pe-5 text-secondary">kate.hunington@gmail.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="ps-2 w-10">
+                                    <h1 class="fs-5 text  fw-light text-center pe-2">Designer</h1>
+                                    <p class="fs-7 text  text-secondary text-center pe-4">UI/UX</p>
+                                </td>
+                                <td class="pt-4">
+                                    <span class="badge bg-warning w-50 fs-6 text text-dark">Awaiting</span></h1>
+                                </td>
+                                <td class="pt-4"> 
+                                    <p class="text-secondary">Senior</p>
+        
+                                </td>
+                                <td class="pt-4">
+                                    <P class="text-primary">EDIT</P>
+        
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+        
+        
+        
+        
+                    </div>
+        
+        
+        
+        
+        
+        
+                </div>
+        
+   
+
+
+                   
+                
+            
+                
+        
+            </div>
+        </div>
+    </div> ....
+    
+
+    <script>
+        $(document).ready(function(){
+            $(".button").click(function(){
+                $(".menubar").fadeToggle(0);
+            })
+            // $(".button").click(function(){
+            //     $(".dashboard").width(100);
+            //     $(".menubar").width(200);
+            // })
+
+        })
+    </script>
+    
+</body>
+</html>
